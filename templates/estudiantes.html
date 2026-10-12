@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes - Flask Ejemplo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mi Aplicación Flask</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+                <li><a href="{{ url_for('estudiantes') }}">Estudiantes</a></li>
+                <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sección de Estudiantes</h2>
+        <p>Listado de estudiantes registrados en la materia:</p>
+        <ul class="student-list">
+            <li class="student-card"><span>Juan Pérez</span> <span>Matrícula #1001</span></li>
+            <li class="student-card"><span>María Gómez</span> <span>Matrícula #1002</span></li>
+            <li class="student-card"><span>Ariel López</span> <span>Matrícula #1003</span></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Taller de Aplicaciones Web - Flask Ejemplo</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
